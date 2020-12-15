@@ -1,0 +1,158 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+admin:
+  username: 道一生
+  password_hash:
+  secret: 6226150andtang
+
+# Site
+title: 太一学宫 #标题
+subtitle: 中道立极 皇极经世 #副标题
+description:
+  闻道易，悟道难。得道易，证道难。
+  悟道不足以得道，得道不足以证道，证道不足以穷道。
+  证道以穷之，于是乎学在矣，于是乎道在矣，于是乎性命在矣。穷理尽性，以至于命。治学即求道，道不悟则学不成。
+  后天之学，迹也。先天之学，心也。迹者形而下为器，心者形而上为道，道器不二，心迹同一。
+  鄙人不才，受先人感召，矢志于道，愿遍研一切重大文明之根本见地，综核名实，权衡偏正，叹大褒圆，中道立极，皇极经世。
+  所谓皇极者，其大中也欤！不立皇极，何以经世？不依中道，何以立极？不遍察各大文明一切圣贤教诲，何以行中庸之道？
+  为天地立心，为生民立命，为往圣继绝学，为万世开太平。我辈证道修真，当发挥往圣先贤于穆不巳、自强不息、周流不殆之精神，海纳百川，不择细流，自宰无量而终成巨浸。群经皆为我注脚，万法皆为我所用，如是方为达道。 #描述
+keywords:
+author: 道一生
+language: zh-CN #语言
+timezone: Asia/Shanghai #时区
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://Hermesfuxi.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing index.html from permalinks
+
+# Directory
+source_dir: source  #资源文件夹，这个文件夹用来存放内容。默认值：source
+public_dir: public  #公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public
+tag_dir: tags  #标签文件夹 默认值：tags
+archive_dir: archives  #归档文件夹 默认值：archives
+category_dir: categories  #分类文件夹  默认值：categories
+code_dir: downloads/code  #Include code 文件夹 默认值：downloads/code
+i18n_dir: :lang  #国际化（i18n）文件夹 默认值：:lang
+skip_render: README.md  #跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude:
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: false
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: yilia
+#theme: next
+
+search:
+  path: search.json
+  field: all
+  format: html
+  limit: 10000
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:Hermesfuxi/Hermesfuxi.github.io.git
+  branch: gh-pages
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
+
+toc:
+  maxdepth: 3
+  class: toc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '#'
+    style: header-anchor
+
+
+valine:
+  appid: PorFiq7wCyNHmz0JHRUqHax4-gzGzoHsz  #Leancloud应用的appId
+  appkey: A7dRODiqoI6aUC1FMCj6Nb4e #Leancloud应用的appKey
+  verify: false #验证码
+  notify: false #评论回复提醒
+  avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: 有话要说？ #评论框占位符
